@@ -139,7 +139,29 @@
       margin-bottom: 16px;
     }
 
-    .purple { color: var(--neon); text-shadow: 0 0 20px var(--neon-glow); }
+    .purple {
+      background: linear-gradient(90deg, #d084ff, #bf5fff, #9b30ff, #e0b8ff, #d084ff);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-flow 4s linear infinite;
+    }
+
+    @keyframes gradient-flow {
+      0% { background-position: 0% center; }
+      100% { background-position: 300% center; }
+    }
+
+    @keyframes neon-flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% { text-shadow: 0 0 12px var(--neon-glow), 0 0 28px var(--neon-glow); opacity: 1; }
+      20%, 24%, 55% { text-shadow: none; opacity: 0.6; }
+    }
+
+    @keyframes float-card {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
 
     p { color: #aaa; margin-bottom: 16px; }
     p:last-child { margin-bottom: 0; }
@@ -186,6 +208,7 @@
       color: var(--neon);
       text-shadow: 0 0 12px var(--neon-glow);
       margin-bottom: 20px;
+      animation: neon-flicker 6s infinite;
     }
 
     .subheadline {
@@ -265,6 +288,12 @@
       transform: translateY(-4px);
       box-shadow: 0 8px 32px rgba(191,95,255,0.2);
     }
+
+    .result-card.visible {
+      animation: float-card 4s ease-in-out infinite;
+    }
+    .result-card.visible:nth-child(2) { animation-delay: 0.5s; }
+    .result-card.visible:nth-child(3) { animation-delay: 1s; }
 
     .result-number {
       font-size: 32px; font-weight: 900;

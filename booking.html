@@ -140,6 +140,7 @@
       color: var(--neon);
       text-shadow: 0 0 12px var(--neon-glow);
       margin-bottom: 16px;
+      animation: neon-flicker 6s infinite;
     }
 
     h1 {
@@ -150,7 +151,24 @@
       margin-bottom: 12px;
     }
 
-    .purple { color: var(--neon); text-shadow: 0 0 20px var(--neon-glow); }
+    .purple {
+      background: linear-gradient(90deg, #d084ff, #bf5fff, #9b30ff, #e0b8ff, #d084ff);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-flow 4s linear infinite;
+    }
+
+    @keyframes gradient-flow {
+      0% { background-position: 0% center; }
+      100% { background-position: 300% center; }
+    }
+
+    @keyframes neon-flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% { text-shadow: 0 0 12px var(--neon-glow), 0 0 28px var(--neon-glow); opacity: 1; }
+      20%, 24%, 55% { text-shadow: none; opacity: 0.6; }
+    }
 
     .subheadline {
       font-size: clamp(15px, 2vw, 18px);
