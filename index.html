@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elevate Operations</title>
+  <link rel="icon" href="https://stcdn.leadconnectorhq.com/funnel/icon/favicon.ico" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('https://images.leadconnectorhq.com/image/f_webp,q_80,w_1200/media/687ef9027f24c65e8e3c392e.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .logo {
+      width: 180px;
+      margin-bottom: 8px;
+    }
+
+    .niche-tag {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #c4b5fd;
+      background: rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      padding: 6px 18px;
+      border-radius: 100px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      color: #ffffff;
+    }
+
+    h1 span {
+      color: #a78bfa;
+    }
+
+    .subtitle {
+      font-size: clamp(16px, 2.5vw, 22px);
+      font-weight: 500;
+      color: #e2e8f0;
+      line-height: 1.5;
+      max-width: 700px;
+    }
+
+    .or-pay {
+      font-size: clamp(18px, 3vw, 26px);
+      font-weight: 700;
+      color: #f9a8d4;
+    }
+
+    /* Wistia video */
+    .video-wrapper {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .wistia_responsive_padding {
+      padding: 56.25% 0 0 0;
+      position: relative;
+    }
+
+    .wistia_responsive_wrapper {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    /* CTA Button */
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #7c3aed, #9333ea);
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 18px 56px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 24px rgba(124, 58, 237, 0.5);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(124, 58, 237, 0.65);
+    }
+
+    /* Typeform popup overlay */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup-overlay.active {
+      display: flex;
+    }
+
+    .popup-box {
+      background: #1a1a2e;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 620px;
+      height: 80vh;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 24px;
+      color: #ffffff;
+      cursor: pointer;
+      z-index: 10;
+      line-height: 1;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup-box iframe,
+    .popup-box [data-tf-live] {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 32px 16px; }
+      .logo { width: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+
+      <img
+        class="logo"
+        src="https://storage.googleapis.com/msgsndr/7TOaQsQFacHz01kASmbA/media/687ef9027f24c65e8e3c392e.png"
+        alt="Elevate Operations"
+      />
+
+      <div class="niche-tag">Mentors &amp; Consultants Doing Over $25K+ Per Month</div>
+
+      <h1>We'll Scale You Past <span>$250K/Month</span> in the Next 120 Days Using Our Completely DFY Trust Amplification Ecosystem...</h1>
+
+      <p class="or-pay">Or You Don't Pay.</p>
+
+      <!-- Wistia Video -->
+      <div class="video-wrapper">
+        <div class="wistia_responsive_padding">
+          <div class="wistia_responsive_wrapper">
+            <iframe
+              src="https://fast.wistia.net/embed/iframe/erjrtw6j56?autoPlay=false&videoFoam=true"
+              title="Elevate Operations VSL"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+              frameborder="0"
+              style="width:100%;height:100%;"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <a class="cta-btn" href="#" onclick="openPopup(); return false;">Let's Talk</a>
+
+    </div>
+  </section>
+
+  <!-- Typeform Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <button class="popup-close" onclick="closePopup()">&#x2715;</button>
+      <div data-tf-live="01K2XDDYY6Y7ZXDFNK39AKTESH" style="width:100%;height:100%;"></div>
+    </div>
+  </div>
+
+  <script src="//embed.typeform.com/next/embed.js"></script>
+  <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
+  <script>
+    function openPopup() {
+      document.getElementById('popup').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePopup() {
+      document.getElementById('popup').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('popup').addEventListener('click', function(e) {
+      if (e.target === this) closePopup();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Scaling Strategies Call — Elevate Operations</title>
+  <link rel="icon" href="https://stcdn.leadconnectorhq.com/funnel/icon/favicon.ico" />
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1257719959361001');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1257719959361001&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #F6F6FF;
+      color: #1a1a2e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e8e4f8;
+      display: flex;
+      justify-content: center;
+      padding: 16px 20px;
+    }
+
+    header img {
+      width: 200px;
+    }
+
+    .page-wrap {
+      width: 100%;
+      max-width: 860px;
+      padding: 48px 24px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .tag {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #7c3aed;
+      background: #ede9fe;
+      border: 1px solid #c4b5fd;
+      padding: 6px 16px;
+      border-radius: 100px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 800;
+      color: #1a1a2e;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .sub {
+      font-size: clamp(14px, 2vw, 17px);
+      color: #4b5563;
+      text-align: center;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .calendar-container {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 32px rgba(124, 58, 237, 0.1);
+      overflow: hidden;
+      min-height: 700px;
+    }
+
+    /* GHL Calendar iframe */
+    .calendar-container iframe {
+      width: 100%;
+      min-height: 700px;
+      border: none;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .page-wrap { padding: 32px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img
+      src="https://storage.googleapis.com/msgsndr/7TOaQsQFacHz01kASmbA/media/687ef9027f24c65e8e3c392e.png"
+      alt="Elevate Operations"
+    />
+  </header>
+
+  <div class="page-wrap">
+
+    <div class="tag">* This is for High Ticket Services, Coaches and Consultants Wanting To Scale To $100K+ Per Month *</div>
+
+    <h1>Book Your Scaling Strategies Call Below</h1>
+
+    <p class="sub">
+      Please pick a time you are <strong>fully available</strong> — no distractions, great WiFi, and willing to have a high-level discussion about your business.
+    </p>
+
+    <div class="calendar-container">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/booking/jeoperations-booking"
+        title="Book a Scaling Strategies Call with Ellis"
+        allow="payment"
+        scrolling="yes"
+      ></iframe>
+    </div>
+
+  </div>
+
+  <script>
+    // Resize iframe to fit content
+    window.addEventListener('message', function(e) {
+      if (e.data && e.data.type === 'hl_calendar_height') {
+        var iframe = document.querySelector('.calendar-container iframe');
+        if (iframe) iframe.style.height = (e.data.height + 40) + 'px';
+      }
+    });
+  </script>
+
+</body>
+</html>
